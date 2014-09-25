@@ -14,12 +14,20 @@ module body() {
                 cylinder(h = body_height, r1 = 9, r2 = 15, center = true);
             sphere(7, center=true);
         }
-        translate([0,0,body_height]) sphere(15);
+        // Nose
+        difference() {
+            translate([0,0,body_height]) sphere(15);
+            translate([0,7,body_height + 13]) cube([25,4,8], center = true);
+        }
     }
 }
 
-scale([0.6,0.8,2]) fin();
-rotate([0,0,112]) fin();
-rotate([0,0,-112]) fin();
-body();
+module ship(){
+    scale([0.6,0.8,2]) fin();
+    rotate([0,0,112]) fin();
+    rotate([0,0,-112]) fin();
+    body();
+}
+
+ship();
 
