@@ -1,11 +1,4 @@
-module sm_mag() {
-    // The size of one of my small magnets plus some buffer for fit
-    cylinder(r=(4.75/2)+0.2, h=(1.6 + 0.4));
-}
-
-module dot() {
-    cylinder(r=4, h=4);
-}
+use <magnets.scad>;
 
 module heart() {
     // http://vectorink.com/holiday/valentine-heart-0075/
@@ -14,13 +7,8 @@ module heart() {
     import(file="heart.dxf", center=true);
 }
 
-//rotate([180,0,0]) difference() {
-//    dot();
-//    translate([0,0,-0.1]) sm_mag();
-//}
-
 difference() {
-    scale([4,4,3])
+    scale([5,5,2.5])
         heart();
-    # translate([4.4,4.4,1.1]) sm_mag();
+    # translate([5.5,5.4,0.6]) scale([1.15,1.15,1.4]) mini_mag();
 }
