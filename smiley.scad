@@ -7,7 +7,7 @@ module smiley() {
 
 
 difference() {
-    scale([.1,.1,2.5])
+    scale([.12,.12,2.5])
         smiley();
-    # translate([9.3,9.4,0.6]) scale([1.15,1.15,1.4]) mini_mag();
+    # translate([11.1,10.8,0.6]) scale([1.15,1.15,1.4]) mini_mag();
 }
