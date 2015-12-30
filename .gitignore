@@ -1,3 +1,5 @@
 *.stl
 *.gcode
 *.swp
+.venv/
+.ipynb_checkpoints/
